@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 
 namespace Helpers
 {
@@ -10,7 +11,8 @@ namespace Helpers
       string[] sampleData = { "a", "b" };
       List<string> list1 = new List<string>(sampleData);
       List<string> combinedList = new List<string>(sampleOutput);
-      return list1;
+      Console.WriteLine(combinedList[0]);
+      return combinedList;
     }
   }
 }
