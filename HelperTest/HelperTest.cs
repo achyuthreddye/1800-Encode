@@ -9,14 +9,15 @@ namespace HelperTest
     [TestMethod]
     public void TestToCombineTwoLists()
     {
-      string[] sampleData = { "a", "b" };
-      string[] sampleOutput = { "ad", "ae", "bd", "be" };
-      string tobeCombined = "de";
+      string[] dictionary = { "callme", "call", "ball", "apache", "hyundai", "zebra" };
+      string[] sampleData = { "a", "b", "c" };
+      string[] sampleOutput = { "ba", "ca" };
+      string tobeCombined = "abc";
       char[] charArr = tobeCombined.ToCharArray();
 
       List<string> list1 = new List<string>(sampleData);
       List<string> ExpectedOutputList = new List<string>(sampleOutput);
-      List<string> actualOutputList = Helper.CombineLists(list1, charArr);
+      List<string> actualOutputList = Helper.CombineListBasedOnDictionary(list1, charArr, dictionary);
 
       CollectionAssert.AreEqual(actualOutputList, ExpectedOutputList);
 
