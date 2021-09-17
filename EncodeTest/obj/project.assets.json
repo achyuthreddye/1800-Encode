@@ -1664,11 +1664,24 @@
       "Encode/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Helpers": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Encode.dll": {}
         },
         "runtime": {
           "bin/placeholder/Encode.dll": {}
+        }
+      },
+      "Helpers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Helpers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Helpers.dll": {}
         }
       }
     }
@@ -6118,6 +6131,11 @@
       "type": "project",
       "path": "../Encode/Encode.csproj",
       "msbuildProject": "../Encode/Encode.csproj"
+    },
+    "Helpers/1.0.0": {
+      "type": "project",
+      "path": "../Helpers/Helpers.csproj",
+      "msbuildProject": "../Helpers/Helpers.csproj"
     }
   },
   "projectFileDependencyGroups": {

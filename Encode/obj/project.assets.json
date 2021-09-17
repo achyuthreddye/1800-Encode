@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Helpers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Helpers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Helpers.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Helpers/1.0.0": {
+      "type": "project",
+      "path": "../Helpers/Helpers.csproj",
+      "msbuildProject": "../Helpers/Helpers.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Helpers >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/achyuthreddy/.nuget/packages/": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/Helpers/Helpers.csproj": {
+              "projectPath": "/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/Helpers/Helpers.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

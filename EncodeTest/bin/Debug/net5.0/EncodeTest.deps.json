@@ -1078,8 +1078,16 @@
         }
       },
       "Encode/1.0.0": {
+        "dependencies": {
+          "Helpers": "1.0.0"
+        },
         "runtime": {
           "Encode.dll": {}
+        }
+      },
+      "Helpers/1.0.0": {
+        "runtime": {
+          "Helpers.dll": {}
         }
       }
     }
@@ -1707,6 +1715,11 @@
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "Encode/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Helpers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -99,3 +99,5 @@
 /Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/EncodeTest/obj/Debug/net5.0/ref/EncodeTest.dll
 /Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/EncodeTest/obj/Debug/net5.0/EncodeTest.pdb
 /Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/EncodeTest/obj/Debug/net5.0/EncodeTest.genruntimeconfig.cache
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/EncodeTest/bin/Debug/net5.0/Helpers.dll
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/EncodeTest/bin/Debug/net5.0/Helpers.pdb
