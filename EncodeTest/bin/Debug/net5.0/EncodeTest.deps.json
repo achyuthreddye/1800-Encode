@@ -1077,8 +1077,14 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "Dictionary/1.0.0": {
+        "runtime": {
+          "Dictionary.dll": {}
+        }
+      },
       "Encode/1.0.0": {
         "dependencies": {
+          "Dictionary": "1.0.0",
           "Helpers": "1.0.0"
         },
         "runtime": {
@@ -1713,6 +1719,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Dictionary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Encode/1.0.0": {
       "type": "project",

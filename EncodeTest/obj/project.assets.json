@@ -1661,10 +1661,21 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "Dictionary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Dictionary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dictionary.dll": {}
+        }
+      },
       "Encode/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Dictionary": "1.0.0",
           "Helpers": "1.0.0"
         },
         "compile": {
@@ -6127,6 +6138,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "Dictionary/1.0.0": {
+      "type": "project",
+      "path": "../Dictionary/Dictionary.csproj",
+      "msbuildProject": "../Dictionary/Dictionary.csproj"
+    },
     "Encode/1.0.0": {
       "type": "project",
       "path": "../Encode/Encode.csproj",
@@ -6220,7 +6236,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
       }
     }
   }

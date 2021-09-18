@@ -2,6 +2,16 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "Dictionary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Dictionary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dictionary.dll": {}
+        }
+      },
       "Helpers/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -15,6 +25,11 @@
     }
   },
   "libraries": {
+    "Dictionary/1.0.0": {
+      "type": "project",
+      "path": "../Dictionary/Dictionary.csproj",
+      "msbuildProject": "../Dictionary/Dictionary.csproj"
+    },
     "Helpers/1.0.0": {
       "type": "project",
       "path": "../Helpers/Helpers.csproj",
@@ -23,6 +38,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Dictionary >= 1.0.0",
       "Helpers >= 1.0.0"
     ]
   },
@@ -51,6 +67,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/Dictionary/Dictionary.csproj": {
+              "projectPath": "/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/Dictionary/Dictionary.csproj"
+            },
             "/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/Helpers/Helpers.csproj": {
               "projectPath": "/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/Helpers/Helpers.csproj"
             }
@@ -81,7 +100,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
       }
     }
   }

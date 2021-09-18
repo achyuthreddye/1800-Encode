@@ -1,0 +1,15 @@
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/bin/Debug/net5.0/ConsoleApp.deps.json
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/bin/Debug/net5.0/ConsoleApp.runtimeconfig.json
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/bin/Debug/net5.0/ConsoleApp.runtimeconfig.dev.json
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/bin/Debug/net5.0/ConsoleApp.dll
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/bin/Debug/net5.0/ref/ConsoleApp.dll
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/bin/Debug/net5.0/ConsoleApp.pdb
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/obj/Debug/net5.0/ConsoleApp.csproj.AssemblyReference.cache
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/obj/Debug/net5.0/ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/obj/Debug/net5.0/ConsoleApp.AssemblyInfoInputs.cache
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/obj/Debug/net5.0/ConsoleApp.AssemblyInfo.cs
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/obj/Debug/net5.0/ConsoleApp.csproj.CoreCompileInputs.cache
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/obj/Debug/net5.0/ConsoleApp.dll
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/obj/Debug/net5.0/ref/ConsoleApp.dll
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/obj/Debug/net5.0/ConsoleApp.pdb
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/obj/Debug/net5.0/ConsoleApp.genruntimeconfig.cache

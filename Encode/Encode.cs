@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Helpers;
-
+using Dictionary;
+using System;
 namespace Encode
 {
   public class EncodePhone
@@ -27,6 +28,14 @@ namespace Encode
     public List<string> encodePhNo(string number)
     {
       List<string> combinedList = new List<string>();
+      string[] dictData = DictionaryData.readDataFromTextFile();
+      foreach (var item in dictData)
+      {
+        Console.WriteLine("dictData");
+        Console.WriteLine(item);
+
+      }
+      //   await DictionaryData.writeDatatoTextFile();
       while (number != "")
       {
         int index = int.Parse(number[0].ToString());
