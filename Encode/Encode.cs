@@ -1,29 +1,47 @@
 ﻿using System.Collections.Generic;
 using Helpers;
+
 namespace Encode
 {
   public class EncodePhone
   {
-    // Helper.CombineListBasedOnDictionary();
+    static string[]
+        dictionary =
+        { "callme","call", "ball", "apache", "hyundai", "zebra" };
 
-    static string[] dictionary = { "callme", "call", "ball", "apache", "hyundai", "zebra" };
-    static string[] sampleData = { "a", "b", "c" };
-    static string[] sampleOutput = { "ba", "ca" };
-    static string tobeCombined = "abc";
-    static char[] charArr = tobeCombined.ToCharArray();
+    static string[]
+        phoneCoded =
+        {
+                "",
+                "",
+                "abc",
+                "def",
+                "ghi",
+                "jkl",
+                "mno",
+                "pqrs",
+                "tuv",
+                "wxyz"
+            };
 
-    static List<string> list1 = new List<string>(sampleData);
-    List<string> ExpectedOutputList = new List<string>(sampleOutput);
-
-    public List<string> enocdeDistionary()
+    public List<string> encodePhNo(string number)
     {
+      List<string> combinedList = new List<string>();
+      while (number != "")
+      {
+        int index = int.Parse(number[0].ToString());
+        char[] charArr1 = phoneCoded[index].ToCharArray();
 
-      List<string> combinedList = Helper.CombineListBasedOnDictionary(list1, charArr, dictionary);
-
+        combinedList =
+            Helper
+                .CombineListBasedOnDictionary(combinedList,
+                charArr1,
+                dictionary);
+        number = number.Remove(0, 1);
+      }
+      //   TODO: delete the items in the list that contains only startswith condition
 
       return combinedList;
-
     }
-
   }
 }

@@ -8,13 +8,13 @@ namespace EncodeTest
   public class UnitTest1
   {
     [TestMethod]
-    public void TestMethod1()
+    public void TestToCombineListsBasedDictionary()
     {
       EncodePhone encode = new EncodePhone();
-      string[] sampleOutput = { "ba", "ca" };
+      string[] sampleOutput = { "ball", "call" };
       List<string> ExpectedOutputList = new List<string>(sampleOutput);
 
-      CollectionAssert.AreEqual(encode.enocdeDistionary(), ExpectedOutputList);
+      CollectionAssert.AreEqual(encode.encodePhNo("2255"), ExpectedOutputList);
 
     }
   }
