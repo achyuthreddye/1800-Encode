@@ -10,7 +10,7 @@ namespace Dictionary
     {
 
       string[] lines = File
-              .ReadAllLines(@"dictionary.txt");
+              .ReadAllLines(@"/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/dictionary.txt");
       return lines;
     }
     public static Task writeDatatoTextFile(string textTobeAdded)

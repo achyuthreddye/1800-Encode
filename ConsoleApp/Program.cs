@@ -10,7 +10,7 @@ namespace ConsoleApp
       string[] abc = DictionaryData.readDataFromTextFile();
 
 
-      await DictionaryData.writeDatatoTextFile("masaratti45");
+      await DictionaryData.writeDatatoTextFile("masaratti");
 
       string[] abc1 = DictionaryData.readDataFromTextFile();
 

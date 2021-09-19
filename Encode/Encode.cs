@@ -1,15 +1,11 @@
 ﻿using System.Collections.Generic;
-using Helpers;
 using Dictionary;
-using System;
+using Helpers;
+
 namespace Encode
 {
   public class EncodePhone
   {
-    static string[]
-        dictionary =
-        { "callme","call", "ball", "apache", "hyundai", "zebra" };
-
     static string[]
         phoneCoded =
         {
@@ -29,13 +25,7 @@ namespace Encode
     {
       List<string> combinedList = new List<string>();
       string[] dictData = DictionaryData.readDataFromTextFile();
-      foreach (var item in dictData)
-      {
-        Console.WriteLine("dictData");
-        Console.WriteLine(item);
 
-      }
-      //   await DictionaryData.writeDatatoTextFile();
       while (number != "")
       {
         int index = int.Parse(number[0].ToString());
@@ -45,11 +35,11 @@ namespace Encode
             Helper
                 .CombineListBasedOnDictionary(combinedList,
                 charArr1,
-                dictionary);
+                dictData);
         number = number.Remove(0, 1);
       }
-      //   TODO: delete the items in the list that contains only startswith condition
 
+      //   TODO: delete the items in the list that contains only startswith condition
       return combinedList;
     }
   }
