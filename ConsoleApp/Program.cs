@@ -1,12 +1,19 @@
-﻿using System;
+﻿using System.Threading.Tasks;
+using Dictionary;
 
 namespace ConsoleApp
 {
-    class Program
+  class Program
+  {
+    static async Task Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+      string[] abc = DictionaryData.readDataFromTextFile();
+
+
+      await DictionaryData.writeDatatoTextFile("masaratti45");
+
+      string[] abc1 = DictionaryData.readDataFromTextFile();
+
     }
+  }
 }

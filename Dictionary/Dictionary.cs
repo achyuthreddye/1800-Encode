@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Dictionary
 {
@@ -7,20 +8,22 @@ namespace Dictionary
   {
     public static string[] readDataFromTextFile()
     {
-      // TODO: implement the relative path 
+
       string[] lines = File
-              .ReadAllLines(@"/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/dictionary.txt");
+              .ReadAllLines(@"dictionary.txt");
       return lines;
     }
-    public static async Task writeDatatoTextFile()
+    public static Task writeDatatoTextFile(string textTobeAdded)
     {
-      using StreamWriter file = new("dictionary123.txt");
-      string text =
-            "A class is the most powerful data type in C#. Like a structure, " +
-            "a class defines the data and behavior of the data type. ";
+      using StreamWriter file = File.AppendText("dictionary.txt");
+      string[] lines = readDataFromTextFile();
+      List<string> linesInDictionary = new List<string>(lines);
+      if (!linesInDictionary.Contains(textTobeAdded))
+      {
+        file.WriteLine(textTobeAdded);
 
-      await file.WriteLineAsync(text);
-
+      }
+      return Task.CompletedTask;
     }
   }
 }
