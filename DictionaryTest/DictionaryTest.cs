@@ -1,5 +1,6 @@
 using Dictionary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 namespace DictionaryTest
 {
   [TestClass]
@@ -10,19 +11,8 @@ namespace DictionaryTest
     {
       string[] dictionary =
       { "callme", "call", "ball", "apache", "hyundai", "zebra" };
-      //   await DictionaryData.writeDatatoTextFile();
       string[] actualOutputList = DictionaryData.readDataFromTextFile();
       CollectionAssert.AreEqual(actualOutputList, dictionary);
     }
-
-    [TestMethod]
-    public void TestWritingData()
-    {
-      //   Task abc = await DictionaryData.writeDatatoTextFile();
-      //   Console.WriteLine("Achyuth");
-      //   var myTask = Task.Run(() => DictionaryData.writeDatatoTextFile());
-      //   await Task.WhenAll(myTask);
-    }
-
   }
 }
