@@ -34,8 +34,9 @@ namespace EncodeTest
     {
       EncodePhone encode = new EncodePhone();
       List<string> ExpectedOutputList = new List<string>();
+      List<string> ActualOutputList = encode.encodePhNo("220055");
       CollectionAssert
-                .AreEqual(encode.encodePhNo("220055"), new List<string>());
+                .AreEqual(ActualOutputList, ExpectedOutputList);
     }
 
     [TestMethod]
@@ -44,8 +45,9 @@ namespace EncodeTest
       EncodePhone encode = new EncodePhone();
       string[] encoded = { "ba0101", "ca0101" };
       List<string> ExpectedOutputList = new List<string>(encoded);
+      List<string> actualOutputList = encode.encodePhNo("220505");
       CollectionAssert
-                .AreEqual(encode.encodePhNo("220505"), new List<string>());
+                .AreEqual(actualOutputList, ExpectedOutputList);
     }
   }
 }

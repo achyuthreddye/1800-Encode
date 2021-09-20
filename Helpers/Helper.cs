@@ -9,7 +9,7 @@ namespace Helpers
     CombineListAtGivenIndex(List<string> list1, Hashtable charItem)
     {
       List<string> combinedList = new List<string>();
-      // List<string> combinedList = new List<string>();
+
       foreach (string item in list1)
       {
         string intermediateString = item;

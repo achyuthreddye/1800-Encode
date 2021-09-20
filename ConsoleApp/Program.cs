@@ -7,6 +7,7 @@ namespace ConsoleApp
   {
     static void Main(string[] args)
     {
+      ProcessUserCommands.ProcessIn();
       EncodePhone encode = new EncodePhone();
       List<string> abc = encode.encodePhNo("220505");
       foreach (var item in abc)
@@ -14,6 +15,7 @@ namespace ConsoleApp
         System.Console.WriteLine(item);
 
       }
+
     }
   }
 }
