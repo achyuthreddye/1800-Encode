@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Dictionary\Dictionary.csproj" />
+    <ProjectReference Include="..\Encode\Encode.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

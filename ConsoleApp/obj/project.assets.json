@@ -11,6 +11,30 @@
         "runtime": {
           "bin/placeholder/Dictionary.dll": {}
         }
+      },
+      "Encode/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Dictionary": "1.0.0",
+          "Helpers": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Encode.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Encode.dll": {}
+        }
+      },
+      "Helpers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Helpers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Helpers.dll": {}
+        }
       }
     }
   },
@@ -19,11 +43,22 @@
       "type": "project",
       "path": "../Dictionary/Dictionary.csproj",
       "msbuildProject": "../Dictionary/Dictionary.csproj"
+    },
+    "Encode/1.0.0": {
+      "type": "project",
+      "path": "../Encode/Encode.csproj",
+      "msbuildProject": "../Encode/Encode.csproj"
+    },
+    "Helpers/1.0.0": {
+      "type": "project",
+      "path": "../Helpers/Helpers.csproj",
+      "msbuildProject": "../Helpers/Helpers.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Dictionary >= 1.0.0"
+      "Dictionary >= 1.0.0",
+      "Encode >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -53,6 +88,9 @@
           "projectReferences": {
             "/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/Dictionary/Dictionary.csproj": {
               "projectPath": "/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/Dictionary/Dictionary.csproj"
+            },
+            "/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/Encode/Encode.csproj": {
+              "projectPath": "/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/Encode/Encode.csproj"
             }
           }
         }

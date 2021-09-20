@@ -27,20 +27,18 @@ namespace Encode
       string[] dictData = DictionaryData.readDataFromTextFile();
       int skippedCount = 0;
 
-      while (number != "")
+      while (number != "" && skippedCount <= 1)
       {
-        if (number[0].ToString() == "")
+        int index = int.Parse(number[0].ToString());
+        char[] charArr1 = phoneCoded[index].ToCharArray();
+
+        if (phoneCoded[index] == "")
         {
           skippedCount += 1;
           number = number.Remove(0, 1);
         }
         else
         {
-
-
-          int index = int.Parse(number[0].ToString());
-          char[] charArr1 = phoneCoded[index].ToCharArray();
-
           combinedList =
               Helper
                   .CombineListBasedOnDictionary(combinedList,
@@ -49,9 +47,6 @@ namespace Encode
           number = number.Remove(0, 1);
         }
       }
-      if (skippedCount > 1) return new List<string>();
-
-
 
       return combinedList;
     }

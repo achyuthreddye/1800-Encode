@@ -16,3 +16,7 @@
 /Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/bin/Debug/net5.0/Dictionary.dll
 /Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/bin/Debug/net5.0/Dictionary.pdb
 /Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/obj/Debug/net5.0/ConsoleApp.csproj.CopyComplete
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/bin/Debug/net5.0/Encode.dll
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/bin/Debug/net5.0/Helpers.dll
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/bin/Debug/net5.0/Encode.pdb
+/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/ConsoleApp/bin/Debug/net5.0/Helpers.pdb

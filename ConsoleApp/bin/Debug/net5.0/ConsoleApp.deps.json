@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v5.0": {
       "ConsoleApp/1.0.0": {
         "dependencies": {
-          "Dictionary": "1.0.0"
+          "Dictionary": "1.0.0",
+          "Encode": "1.0.0"
         },
         "runtime": {
           "ConsoleApp.dll": {}
@@ -17,6 +18,20 @@
       "Dictionary/1.0.0": {
         "runtime": {
           "Dictionary.dll": {}
+        }
+      },
+      "Encode/1.0.0": {
+        "dependencies": {
+          "Dictionary": "1.0.0",
+          "Helpers": "1.0.0"
+        },
+        "runtime": {
+          "Encode.dll": {}
+        }
+      },
+      "Helpers/1.0.0": {
+        "runtime": {
+          "Helpers.dll": {}
         }
       }
     }
@@ -28,6 +43,16 @@
       "sha512": ""
     },
     "Dictionary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Encode/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Helpers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
