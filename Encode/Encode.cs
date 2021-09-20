@@ -25,21 +25,34 @@ namespace Encode
     {
       List<string> combinedList = new List<string>();
       string[] dictData = DictionaryData.readDataFromTextFile();
+      int skippedCount = 0;
 
       while (number != "")
       {
-        int index = int.Parse(number[0].ToString());
-        char[] charArr1 = phoneCoded[index].ToCharArray();
+        if (number[0].ToString() == "")
+        {
+          skippedCount += 1;
+          number = number.Remove(0, 1);
+        }
+        else
+        {
 
-        combinedList =
-            Helper
-                .CombineListBasedOnDictionary(combinedList,
-                charArr1,
-                dictData);
-        number = number.Remove(0, 1);
+
+          int index = int.Parse(number[0].ToString());
+          char[] charArr1 = phoneCoded[index].ToCharArray();
+
+          combinedList =
+              Helper
+                  .CombineListBasedOnDictionary(combinedList,
+                  charArr1,
+                  dictData);
+          number = number.Remove(0, 1);
+        }
       }
+      if (skippedCount > 1) return new List<string>();
 
-      //   TODO: delete the items in the list that contains only startswith condition
+
+
       return combinedList;
     }
   }
