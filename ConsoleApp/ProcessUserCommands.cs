@@ -20,6 +20,10 @@ namespace ConsoleApp
         {
           Console.WriteLine(item);
         }
+        if (encodedWords.Count == 0)
+        {
+          Console.WriteLine("there are no possible encoding for " + inputPhNo + "  in the dictionary. ");
+        }
       }
     }
   }
