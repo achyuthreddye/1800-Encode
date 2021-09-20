@@ -37,5 +37,14 @@ namespace EncodeTest
       CollectionAssert
                 .AreEqual(encode.encodePhNo("220055"), new List<string>());
     }
+
+    [TestMethod]
+    public void TestToEncodeWithMoreThanOneReplacementNonContinuously()
+    {
+      EncodePhone encode = new EncodePhone();
+      List<string> ExpectedOutputList = new List<string>();
+      CollectionAssert
+                .AreEqual(encode.encodePhNo("220505"), new List<string>());
+    }
   }
 }

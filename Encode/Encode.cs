@@ -6,6 +6,7 @@ namespace Encode
 {
   public class EncodePhone
   {
+    // TODO: should this be stored somewhere else
     static string[]
         phoneCoded =
         {
