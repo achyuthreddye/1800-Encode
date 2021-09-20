@@ -15,10 +15,7 @@ namespace ConsoleApp
       string inputPhNo = Console.ReadLine();
       List<string> encodedWords = new List<string>();
       encodedWords = encode.encodePhNo(inputPhNo);
-      foreach (string item in encodedWords)
-      {
-        Console.WriteLine(item);
-      }
+
       if (encodedWords.Count == 0)
       {
         Console
@@ -26,6 +23,15 @@ namespace ConsoleApp
             inputPhNo +
             "  in the dictionary. ");
       }
+      else
+      {
+        Console.WriteLine("The possible words could be replaced with the number  " + inputPhNo);
+        foreach (string item in encodedWords)
+        {
+          Console.WriteLine(item);
+        }
+      }
+      ProcessUserCommands.ProcessIn();
     }
 
     public static void viewDictionary()
@@ -36,15 +42,18 @@ namespace ConsoleApp
       {
         Console.WriteLine(item);
       }
+      ProcessUserCommands.ProcessIn();
     }
 
     public static void addToDictionary()
     {
-      Console.WriteLine("Please enter the word that has to added to the dictionary");
+      Console
+          .WriteLine("Please enter the word that has to added to the dictionary");
       string wordTobeAdded = Console.ReadLine();
       DictionaryData.writeDatatoTextFile(wordTobeAdded);
-      Console.WriteLine("Added the word to the dictionary. Successfully!!!!");
-
+      Console
+          .WriteLine("Added the word to the dictionary. Successfully!!!!");
+      ProcessUserCommands.ProcessIn();
     }
   }
 }

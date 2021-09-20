@@ -27,6 +27,12 @@ namespace Encode
       List<string> combinedList = new List<string>();
       string[] dictData = DictionaryData.readDataFromTextFile();
       int skippedCount = 0;
+      for (int i = 0; i < number.Length; i++)
+      {
+        char[] charrArr = phoneCoded[int.Parse(number[i].ToString())].ToCharArray();
+        System.Console.WriteLine(charrArr);
+
+      }
 
       while (number != "" && skippedCount <= 1)
       {

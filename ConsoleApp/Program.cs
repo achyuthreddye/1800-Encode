@@ -11,14 +11,7 @@ namespace ConsoleApp
     {
       EncodePhone encodeMethod = new EncodePhone();
       List<string> listOfDictionary = new List<string>();
-
-      string x;
-      System.Console.WriteLine("Enter the the following option that is needed");
-
-      // using the method
-      x = System.Console.ReadLine();
-
-      ProcessUserCommands.ProcessIn(x);
+      ProcessUserCommands.ProcessIn();
       return Task.CompletedTask;
     }
   }
