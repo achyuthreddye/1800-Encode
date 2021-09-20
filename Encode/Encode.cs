@@ -27,33 +27,29 @@ namespace Encode
       List<string> combinedList = new List<string>();
       string[] dictData = DictionaryData.readDataFromTextFile();
       int skippedCount = 0;
+      int tobeReplaced;
       for (int i = 0; i < number.Length; i++)
       {
-        char[] charrArr = phoneCoded[int.Parse(number[i].ToString())].ToCharArray();
-        System.Console.WriteLine(charrArr);
-
-      }
-
-      while (number != "" && skippedCount <= 1)
-      {
-        int index = int.Parse(number[0].ToString());
-        char[] charArr1 = phoneCoded[index].ToCharArray();
-
+        if (skippedCount > 1) break;
+        tobeReplaced = i;
+        int index = int.Parse(number[i].ToString());
         if (phoneCoded[index] == "")
         {
           skippedCount += 1;
-          number = number.Remove(0, 1);
         }
         else
         {
+          char[] charrArr =
+              phoneCoded[int.Parse(number[i].ToString())]
+                  .ToCharArray();
           combinedList =
               Helper
                   .CombineListBasedOnDictionary(combinedList,
-                  charArr1,
+                  charrArr,
                   dictData);
-          number = number.Remove(0, 1);
         }
       }
+
       if (skippedCount > 1) return new List<string>();
 
       return combinedList;
