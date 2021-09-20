@@ -1,16 +1,25 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace Helpers
 {
   public static class Helper
   {
     public static List<string>
-    CombineList(List<string> list1, char charItem)
+    CombineListAtGivenIndex(List<string> list1, Hashtable charItem)
     {
       List<string> combinedList = new List<string>();
+      // List<string> combinedList = new List<string>();
       foreach (string item in list1)
       {
-        combinedList.Add(item + charItem);
+        string intermediateString = item;
+        foreach (DictionaryEntry item1 in charItem)
+        {
+          intermediateString = intermediateString.Insert(int.Parse(item1.Key.ToString()),
+                  item1.Value.ToString());
+
+        }
+        combinedList.Add(intermediateString);
       }
       return combinedList;
     }
@@ -24,7 +33,7 @@ namespace Helpers
     {
       List<string> combinedList = new List<string>();
 
-      // TODO: Can be optimized here instead of the three loops
+
       if (List1.Count == 0)
       {
         foreach (char item in charList)

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using Dictionary;
 using Helpers;
 
@@ -24,19 +25,32 @@ namespace Encode
 
     public List<string> encodePhNo(string number)
     {
+      // TODO: should this be static
       List<string> combinedList = new List<string>();
       string[] dictData = DictionaryData.readDataFromTextFile();
       bool consecutiveRepeatedDigits = false;
+
+      Hashtable numberNames = new Hashtable();
 
       for (int i = 0; i < number.Length; i++)
       {
         if (consecutiveRepeatedDigits) break;
 
         int index = int.Parse(number[i].ToString());
-        if (phoneCoded[index] == "" && phoneCoded[index + 1] == "")
+        int nextIndex =
+            i == number.Length - 1
+                ? int.Parse(number[i].ToString())
+                : -1;
+
+        if (phoneCoded[index] == "")
         {
-          consecutiveRepeatedDigits = true;
-          break;
+          if (nextIndex != -1 && phoneCoded[nextIndex] == "")
+          {
+            consecutiveRepeatedDigits = true;
+            break;
+          }
+
+          numberNames.Add(i, number[i]);
         }
         else
         {
@@ -50,6 +64,23 @@ namespace Encode
                   dictData);
         }
       }
+      System.Console.WriteLine("Int eh afd");
+
+      foreach (DictionaryEntry item in numberNames)
+      {
+        System
+            .Console
+            .WriteLine("In the foreach " +
+            item.Key +
+            "and the value is " +
+            item.Value);
+      }
+      if (numberNames.Count >= 1)
+      {
+        return Helper.CombineListAtGivenIndex(combinedList, numberNames);
+
+      }
+
 
       if (consecutiveRepeatedDigits) return new List<string>();
 
