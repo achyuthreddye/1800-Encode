@@ -26,16 +26,17 @@ namespace Encode
     {
       List<string> combinedList = new List<string>();
       string[] dictData = DictionaryData.readDataFromTextFile();
-      int skippedCount = 0;
-      int tobeReplaced;
+      bool consecutiveRepeatedDigits = false;
+
       for (int i = 0; i < number.Length; i++)
       {
-        if (skippedCount > 1) break;
-        tobeReplaced = i;
+        if (consecutiveRepeatedDigits) break;
+
         int index = int.Parse(number[i].ToString());
-        if (phoneCoded[index] == "")
+        if (phoneCoded[index] == "" && phoneCoded[index + 1] == "")
         {
-          skippedCount += 1;
+          consecutiveRepeatedDigits = true;
+          break;
         }
         else
         {
@@ -50,7 +51,7 @@ namespace Encode
         }
       }
 
-      if (skippedCount > 1) return new List<string>();
+      if (consecutiveRepeatedDigits) return new List<string>();
 
       return combinedList;
     }
