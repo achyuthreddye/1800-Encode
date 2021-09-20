@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Encode;
+using Dictionary;
 
 namespace ConsoleApp
 {
@@ -26,6 +27,24 @@ namespace ConsoleApp
             {
               Console.WriteLine("there are no possible encoding for " + inputPhNo + "  in the dictionary. ");
             }
+            break;
+          }
+        case "dictionaryview":
+          {
+            string[] dicData = DictionaryData.readDataFromTextFile();
+            Console.WriteLine("The words in the dictionary are");
+            foreach (string item in dicData)
+            {
+              Console.WriteLine(item);
+
+            }
+            break;
+          }
+        case "addworddictionary":
+          {
+            Console.WriteLine("Please enter the word that has to added to the dictionary");
+            string wordTobeAdded = Console.ReadLine();
+            DictionaryData.writeDatatoTextFile(wordTobeAdded);
             break;
           }
       }

@@ -17,7 +17,7 @@ namespace ConsoleApp
 
       // using the method
       x = System.Console.ReadLine();
-      System.Console.WriteLine(x.ToString());
+
       ProcessUserCommands.ProcessIn(x);
       return Task.CompletedTask;
     }
