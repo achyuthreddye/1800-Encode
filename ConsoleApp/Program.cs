@@ -1,18 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Encode;
-
-
-namespace ConsoleApp
+﻿namespace ConsoleApp
 {
   class Program
   {
-    static Task Main(string[] args)
+    static void Main(string[] args)
     {
-      EncodePhone encodeMethod = new EncodePhone();
-      List<string> listOfDictionary = new List<string>();
       ProcessUserCommands.ProcessIn();
-      return Task.CompletedTask;
     }
   }
 }

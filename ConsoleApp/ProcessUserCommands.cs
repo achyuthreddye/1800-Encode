@@ -7,7 +7,7 @@ namespace ConsoleApp
       string input;
       System
           .Console
-          .WriteLine("\nEnter the following option that is needed \n 1--> encode \n 2--> viewdictionary \n 3--> addwordtodictionary ");
+          .WriteLine("\nEnter the following option that is needed \n 1--> encode \n 2--> viewdictionary \n 3--> addwordtodictionary \n 4--> quit ");
       input = System.Console.ReadLine();
       switch (input.ToLower())
       {
