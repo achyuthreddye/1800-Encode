@@ -47,6 +47,7 @@ namespace Encode
           number = number.Remove(0, 1);
         }
       }
+      if (skippedCount > 1) return new List<string>();
 
       return combinedList;
     }
