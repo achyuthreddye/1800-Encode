@@ -27,15 +27,11 @@ namespace EncodeTest
       List<string> ExpectedOutputList = new List<string>(sampleOutput);
       List<string> ActualOutputList = encode.encodePhNo("22055");
 
-
       bool isEqual =
           Enumerable
               .SequenceEqual(ExpectedOutputList.OrderBy(e => e),
               ActualOutputList.OrderBy(e => e));
       Assert.IsTrue(isEqual);
-      // Assert.IsTrue(ExpectedOutputList.SequenceEqual(ActualOutputList));
-      // CollectionAssert
-      //     .AreEqual(ActualOutputList, ExpectedOutputList);
     }
 
     [TestMethod]
@@ -45,14 +41,12 @@ namespace EncodeTest
       List<string> ExpectedOutputList = new List<string>();
       List<string> ActualOutputList = encode.encodePhNo("220055");
 
-
       bool isEqual =
           Enumerable
               .SequenceEqual(ExpectedOutputList.OrderBy(e => e),
               ActualOutputList.OrderBy(e => e));
       Assert.IsTrue(isEqual);
     }
-
 
     [TestMethod]
     public void TestToEncodeWithPeriod()
