@@ -38,12 +38,6 @@ Users can interact with the Console App with the following options:
 1. dotnet test EncodeTest/EncodeTest.csproj
 ```
 
-### Testing the dictionary component.
-
-```bash
-1. dotnet test DictionaryTest/DictionaryTest.csproj
-```
-
 ### Testing the Helpers component.
 
 ```bash
