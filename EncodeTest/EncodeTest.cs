@@ -18,16 +18,17 @@ namespace EncodeTest
           .AreEqual(encode.encodePhNo("2255"), ExpectedOutputList);
     }
 
-    [TestMethod]
-    public void TestToEncodeWithOneReplacement()
-    {
-      EncodePhone encode = new EncodePhone();
-      string[] sampleOutput = { "ba0ll", "ca0ll" };
-      List<string> ExpectedOutputList = new List<string>(sampleOutput);
+    // [TestMethod]
+    // public void TestToEncodeWithOneReplacement()
+    // {
+    //   EncodePhone encode = new EncodePhone();
+    //   string[] sampleOutput = { "ba0ll", "ca0ll" };
+    //   List<string> ExpectedOutputList = new List<string>(sampleOutput);
+    //   List<string> ActualOutputList = encode.encodePhNo("22055");
 
-      CollectionAssert
-          .AreEqual(encode.encodePhNo("22055"), ExpectedOutputList);
-    }
+    //   CollectionAssert
+    //       .AreEqual(ActualOutputList, ExpectedOutputList);
+    // }
 
     [TestMethod]
     public void TestToEncodeWithConsecutiveNosWithNosReplacement()
@@ -35,19 +36,30 @@ namespace EncodeTest
       EncodePhone encode = new EncodePhone();
       List<string> ExpectedOutputList = new List<string>();
       List<string> ActualOutputList = encode.encodePhNo("220055");
-      CollectionAssert
-                .AreEqual(ActualOutputList, ExpectedOutputList);
+      // CollectionAssert
+      //           .AreEqual(ActualOutputList, ExpectedOutputList);
+      CollectionAssert.AreEqual(ExpectedOutputList, ActualOutputList);
     }
 
-    [TestMethod]
-    public void TestToEncodeWithMoreThanOneReplacementNonContinuously()
-    {
-      EncodePhone encode = new EncodePhone();
-      string[] encoded = { "ba0101", "ca0101" };
-      List<string> ExpectedOutputList = new List<string>(encoded);
-      List<string> actualOutputList = encode.encodePhNo("220505");
-      CollectionAssert
-                .AreEqual(actualOutputList, ExpectedOutputList);
-    }
+    // [TestMethod]
+    // public void TestToEncodeWithMoreThanOneReplacementNonContinuously()
+    // {
+    //   EncodePhone encode = new EncodePhone();
+    //   string[] encoded = { "ba0101", "ca0101" };
+    //   List<string> ExpectedOutputList = new List<string>(encoded);
+    //   List<string> actualOutputList = encode.encodePhNo("220505");
+    //   CollectionAssert
+    //             .AreEqual(ExpectedOutputList, actualOutputList);
+    // }
+    // [TestMethod]
+    // public void TestToEncodeWithPeriod()
+    // {
+    //   EncodePhone encode = new EncodePhone();
+    //   string[] encoded = { "ba-11", "ca-11" };
+    //   List<string> ExpectedOutputList = new List<string>(encoded);
+    //   List<string> actualOutputList = encode.encodePhNo("22.55");
+    //   CollectionAssert
+    //             .AreEqual(ExpectedOutputList, actualOutputList);
+    // }
   }
 }

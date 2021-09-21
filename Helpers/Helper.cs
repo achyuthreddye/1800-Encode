@@ -15,9 +15,12 @@ namespace Helpers
         string intermediateString = item;
         foreach (DictionaryEntry item1 in charItem)
         {
-          intermediateString = intermediateString.Insert(int.Parse(item1.Key.ToString()),
-                  item1.Value.ToString());
 
+          intermediateString =
+              intermediateString
+                  .Insert(int.Parse(item1.Key.ToString()),
+                  item1.Value.ToString());
+          // temp += 1;
         }
         combinedList.Add(intermediateString);
       }
@@ -32,7 +35,6 @@ namespace Helpers
     )
     {
       List<string> combinedList = new List<string>();
-
 
       if (List1.Count == 0)
       {

@@ -34,13 +34,17 @@ namespace Encode
 
       for (int i = 0; i < number.Length; i++)
       {
-        if (consecutiveRepeatedDigits) break;
+        if (number[i].ToString() == ".")
+        {
+          numberNames.Add(i, "-");
+          continue;
+        }
 
         int index = int.Parse(number[i].ToString());
         int nextIndex =
             i == number.Length - 1
-                ? int.Parse(number[i].ToString())
-                : -1;
+                ? -1
+                : int.Parse(number[i].ToString());
 
         if (phoneCoded[index] == "")
         {
@@ -64,23 +68,12 @@ namespace Encode
                   dictData);
         }
       }
-      System.Console.WriteLine("Int eh afd");
 
-      foreach (DictionaryEntry item in numberNames)
-      {
-        System
-            .Console
-            .WriteLine("In the foreach " +
-            item.Key +
-            "and the value is " +
-            item.Value);
-      }
       if (numberNames.Count >= 1)
       {
-        return Helper.CombineListAtGivenIndex(combinedList, numberNames);
-
+        return Helper
+            .CombineListAtGivenIndex(combinedList, numberNames);
       }
-
 
       if (consecutiveRepeatedDigits) return new List<string>();
 
