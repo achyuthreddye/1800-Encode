@@ -11,8 +11,8 @@ namespace Encode
     static string[]
         phoneCoded =
         {
-                "",
-                "",
+                " ",
+                " ",
                 "abc",
                 "def",
                 "ghi",
@@ -25,11 +25,7 @@ namespace Encode
 
     public List<string> encodePhNo(string number)
     {
-      // TODO: should this be static
-
-      string numberWithoutPunctuation = Helper.removeAllPunctuationsApartFromPeriod(number);
-
-
+      number = Helper.removeAllPunctuationsApartFromPeriod(number);
 
       List<string> combinedList = new List<string>();
       string[] dictData = DictionaryData.readDataFromTextFile();
@@ -37,34 +33,38 @@ namespace Encode
 
       Hashtable toBeReplaced = new Hashtable();
 
-      for (int i = 0; i < numberWithoutPunctuation.Length; i++)
+      for (int i = 0; i < number.Length; i++)
       {
-        if (numberWithoutPunctuation[i].ToString() == ".")
+        if (consecutiveRepeatedDigits) break; //redundant
+
+        if (number[i].ToString() == ".")
         {
           toBeReplaced.Add(i, "-");
           continue;
         }
 
-        int index = int.Parse(numberWithoutPunctuation[i].ToString());
-        int nextIndex =
-            i == numberWithoutPunctuation.Length - 1
-                ? -1
-                : int.Parse(numberWithoutPunctuation[i].ToString());
+        int index = int.Parse(number[i].ToString());
 
-        if (phoneCoded[index] == "")
+        int nextIndex =
+            i == number.Length - 1
+                ? -1
+                : int.Parse(number[i + 1].ToString());
+
+        if (phoneCoded[index] == " ")
         {
-          if (nextIndex != -1 && phoneCoded[nextIndex] == "")
+
+          if (nextIndex != -1 && phoneCoded[nextIndex] == " ")
           {
             consecutiveRepeatedDigits = true;
             break;
           }
 
-          toBeReplaced.Add(i, numberWithoutPunctuation[i]);
+          toBeReplaced.Add(i, number[i]);
         }
         else
         {
           char[] charrArr =
-              phoneCoded[int.Parse(numberWithoutPunctuation[i].ToString())]
+              phoneCoded[int.Parse(number[i].ToString())]
                   .ToCharArray();
           combinedList =
               Helper
@@ -74,15 +74,21 @@ namespace Encode
         }
       }
 
+      if (consecutiveRepeatedDigits) return new List<string>();
       if (toBeReplaced.Count >= 1)
       {
-        return Helper
+        List<string> combinedListIndex = Helper
             .CombineListAtGivenIndex(combinedList, toBeReplaced);
+        foreach (string item in combinedListIndex)
+        {
+          System.Console.WriteLine(item);
+
+        }
+
+        return combinedListIndex;
       }
-
-      if (consecutiveRepeatedDigits) return new List<string>();
-
-      return combinedList;
+      else
+        return combinedList;
     }
   }
 }

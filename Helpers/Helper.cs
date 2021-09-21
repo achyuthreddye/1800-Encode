@@ -33,7 +33,7 @@ namespace Helpers
               intermediateString
                   .Insert(int.Parse(item1.Key.ToString()),
                   item1.Value.ToString());
-          // temp += 1;
+
         }
         combinedList.Add(intermediateString);
       }
