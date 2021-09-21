@@ -1,25 +1,13 @@
-﻿using Encode;
-using System.Collections.Generic;
-
-namespace ConsoleApp
+﻿namespace ConsoleApp
 {
   class Program
   {
     static void Main(string[] args)
     {
-      EncodePhone encode = new EncodePhone();
-      List<string> abc = encode.encodePhNo("22055");
-      System.Console.WriteLine(abc.Count);
-      foreach (var item in abc)
-      {
-        System.Console.WriteLine(item);
-
-      }
+      System
+          .Console
+          .WriteLine("\n🙏 Hello!!\n Now list your phone numbers 📞 using letters \n ");
       ProcessUserCommands.ProcessIn();
-
-
-
-
     }
   }
 }

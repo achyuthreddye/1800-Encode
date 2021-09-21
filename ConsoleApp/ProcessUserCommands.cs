@@ -6,35 +6,38 @@ namespace ConsoleApp
     {
       string input;
       System
-          .Console
-          .WriteLine("\nEnter the following option that is needed \n 1--> encode \n 2--> viewdictionary \n 3--> addwordtodictionary \n 4--> quit ");
+         .Console
+         .WriteLine("\nEnter the following option that is needed \n 1--> Encode your Phone number 📞 based on the current dictionary 📚  of words \n 2--> View 👀 all the words in the dictionary📚  \n 3--> Not satisified 😞 with the current words in the dictionary📚 .🪛🔩Customize your dictionary 📚 by adding a word 😎 of your choice  \n 4--> 🛑 quit ");
+
       input = System.Console.ReadLine();
       switch (input.ToLower())
       {
-        case "encode":
+        case "1":
           {
             Wrapper.EncodePhone();
             break;
           }
-        case "viewdictionary":
+        case "2":
           {
             Wrapper.viewDictionary();
             break;
           }
-        case "addwordtodictionary":
+        case "3":
           {
             Wrapper.addToDictionary();
             break;
           }
-        case "quit":
+        case "4":
           {
+            System.Console.WriteLine("👋 Bye!!!, We will meet soon !!");
             return;
           }
         default:
           {
             System
                 .Console
-                .WriteLine("Please enter the valid option that has to be performed");
+                .WriteLine("Please 🥺 enter the valid option from the 🪣list ");
+            ProcessUserCommands.ProcessIn();
             break;
           }
       }
