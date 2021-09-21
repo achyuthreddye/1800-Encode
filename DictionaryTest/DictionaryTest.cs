@@ -10,9 +10,11 @@ namespace DictionaryTest
     public void TestGettingAllData()
     {
       string[] dictionary =
-      { "callme", "call", "ball", "apache", "hyundai", "zebra" };
+      { "reddy", "hyundai", "ball", "call", "callme" };
       string[] actualOutputList = DictionaryData.readDataFromTextFile();
       CollectionAssert.AreEqual(actualOutputList, dictionary);
     }
   }
 }
+
+
