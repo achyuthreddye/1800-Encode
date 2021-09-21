@@ -6,18 +6,31 @@ namespace Helpers
 {
   public static class Helper
   {
-    public static string removeAllPunctuationsApartFromPeriod(string inputString)
+    public static List<string>
+    ItemsInPresentDictionary(List<string> inputList, string[] dictionaryArray)
+    {
+      List<string> dictionaryList = new List<string>(dictionaryArray);
+      List<string> cleanedList = new List<string>();
+      foreach (string item in inputList)
+      {
+        if (dictionaryList.Contains(item)) cleanedList.Add(item);
+      }
+      return cleanedList;
+    }
+
+    public static string
+    removeAllPunctuationsApartFromPeriod(string inputString)
     {
       var sb = new StringBuilder();
 
       foreach (char c in inputString)
       {
-        if (!char.IsPunctuation(c) || c.ToString() == ".")
-          sb.Append(c);
+        if (!char.IsPunctuation(c) || c.ToString() == ".") sb.Append(c);
       }
       string finalOut = sb.ToString();
       return finalOut;
     }
+
     public static List<string>
     CombineListAtGivenIndex(List<string> list1, Hashtable charItem)
     {
@@ -28,12 +41,10 @@ namespace Helpers
         string intermediateString = item;
         foreach (DictionaryEntry item1 in charItem)
         {
-
           intermediateString =
               intermediateString
                   .Insert(int.Parse(item1.Key.ToString()),
                   item1.Value.ToString());
-
         }
         combinedList.Add(intermediateString);
       }

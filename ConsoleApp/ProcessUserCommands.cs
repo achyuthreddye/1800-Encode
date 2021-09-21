@@ -7,7 +7,7 @@ namespace ConsoleApp
       string input;
       System
          .Console
-         .WriteLine("\nEnter the following option that is needed \n 1--> Encode your Phone number 📞 based on the current dictionary 📚  of words \n 2--> View 👀 all the words in the dictionary📚  \n 3--> Not satisified 😞 with the current words in the dictionary📚 .🪛🔩Customize your dictionary 📚 by adding a word 😎 of your choice  \n 4--> 🛑 quit ");
+         .WriteLine("\nEnter the following option that is needed \n 1--> Encode your Phone number 📞 based on the current dictionary 📚  of words \n 2--> View 👀 all the words in the dictionary📚  \n 3--> Not satisified 😞 with the current words in the dictionary📚 .🪛Customize🔩 your dictionary 📚 by adding a word 😎 of your choice  \n 4--> 🛑 quit ");
 
       input = System.Console.ReadLine();
       switch (input.ToLower())
