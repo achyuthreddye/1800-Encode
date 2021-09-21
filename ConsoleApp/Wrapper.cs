@@ -28,7 +28,7 @@ namespace ConsoleApp
         Console.WriteLine("The possible words could be replaced with the number  " + inputPhNo);
         foreach (string item in encodedWords)
         {
-          Console.WriteLine(item);
+          Console.WriteLine(item.ToUpper());
         }
       }
       ProcessUserCommands.ProcessIn();
@@ -40,7 +40,7 @@ namespace ConsoleApp
       Console.WriteLine("The words in the dictionary are");
       foreach (string item in dicData)
       {
-        Console.WriteLine(item);
+        Console.WriteLine(item.ToUpper());
       }
       ProcessUserCommands.ProcessIn();
     }
