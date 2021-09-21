@@ -26,25 +26,30 @@ namespace Encode
     public List<string> encodePhNo(string number)
     {
       // TODO: should this be static
+
+      string numberWithoutPunctuation = Helper.removeAllPunctuationsApartFromPeriod(number);
+
+
+
       List<string> combinedList = new List<string>();
       string[] dictData = DictionaryData.readDataFromTextFile();
       bool consecutiveRepeatedDigits = false;
 
-      Hashtable numberNames = new Hashtable();
+      Hashtable toBeReplaced = new Hashtable();
 
-      for (int i = 0; i < number.Length; i++)
+      for (int i = 0; i < numberWithoutPunctuation.Length; i++)
       {
-        if (number[i].ToString() == ".")
+        if (numberWithoutPunctuation[i].ToString() == ".")
         {
-          numberNames.Add(i, "-");
+          toBeReplaced.Add(i, "-");
           continue;
         }
 
-        int index = int.Parse(number[i].ToString());
+        int index = int.Parse(numberWithoutPunctuation[i].ToString());
         int nextIndex =
-            i == number.Length - 1
+            i == numberWithoutPunctuation.Length - 1
                 ? -1
-                : int.Parse(number[i].ToString());
+                : int.Parse(numberWithoutPunctuation[i].ToString());
 
         if (phoneCoded[index] == "")
         {
@@ -54,12 +59,12 @@ namespace Encode
             break;
           }
 
-          numberNames.Add(i, number[i]);
+          toBeReplaced.Add(i, numberWithoutPunctuation[i]);
         }
         else
         {
           char[] charrArr =
-              phoneCoded[int.Parse(number[i].ToString())]
+              phoneCoded[int.Parse(numberWithoutPunctuation[i].ToString())]
                   .ToCharArray();
           combinedList =
               Helper
@@ -69,10 +74,10 @@ namespace Encode
         }
       }
 
-      if (numberNames.Count >= 1)
+      if (toBeReplaced.Count >= 1)
       {
         return Helper
-            .CombineListAtGivenIndex(combinedList, numberNames);
+            .CombineListAtGivenIndex(combinedList, toBeReplaced);
       }
 
       if (consecutiveRepeatedDigits) return new List<string>();

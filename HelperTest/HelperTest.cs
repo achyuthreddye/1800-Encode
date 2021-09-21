@@ -36,5 +36,13 @@ namespace HelperTest
       CollectionAssert.AreEqual(actualOutputList, ExpectedOutputList);
 
     }
+    [TestMethod]
+    public void TestToRemoveAllPunctuationAprtFromPeriod()
+    {
+      string inputString = "22.5&5";
+      string expectedString = "22.55";
+      Assert.AreEqual(expectedString, Helper.removeAllPunctuationsApartFromPeriod(inputString));
+
+    }
   }
 }
