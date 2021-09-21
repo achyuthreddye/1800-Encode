@@ -49,8 +49,10 @@ namespace Encode
 
         int index = int.Parse(number[i].ToString());
 
+
         int nextIndex =
-            i == number.Length - 1
+
+            (i == number.Length - 1 || number[i + 1].ToString() == ".")
                 ? -1
                 : int.Parse(number[i + 1].ToString());
 

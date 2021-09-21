@@ -54,18 +54,18 @@ namespace EncodeTest
     }
 
 
-    // [TestMethod]
-    // public void TestToEncodeWithPeriod()
-    // {
-    //   EncodePhone encode = new EncodePhone();
-    //   string[] encoded = { "ba-ll", "ca-ll" };
-    //   List<string> ExpectedOutputList = new List<string>(encoded);
-    //   List<string> ActualOutputList = encode.encodePhNo("22.55");
-    //   bool isEqual =
-    //       Enumerable
-    //           .SequenceEqual(ExpectedOutputList.OrderBy(e => e),
-    //           ActualOutputList.OrderBy(e => e));
-    //   Assert.IsTrue(isEqual);
-    // }
+    [TestMethod]
+    public void TestToEncodeWithPeriod()
+    {
+      EncodePhone encode = new EncodePhone();
+      string[] encoded = { "ba-ll", "ca-ll" };
+      List<string> ExpectedOutputList = new List<string>(encoded);
+      List<string> ActualOutputList = encode.encodePhNo("22.55");
+      bool isEqual =
+          Enumerable
+              .SequenceEqual(ExpectedOutputList.OrderBy(e => e),
+              ActualOutputList.OrderBy(e => e));
+      Assert.IsTrue(isEqual);
+    }
   }
 }
