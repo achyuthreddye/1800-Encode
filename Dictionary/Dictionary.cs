@@ -9,8 +9,9 @@ namespace Dictionary
     public static string[] readDataFromTextFile()
     {
 
+
       string[] lines = File
-              .ReadAllLines(@"/Users/achyuthreddy/Desktop/js projects/everest_coding_assignments/1800_coding/dictionary.txt");
+              .ReadAllLines("dictionary.txt");
       return lines;
     }
     public static Task writeDatatoTextFile(string textTobeAdded)
