@@ -14,7 +14,11 @@ namespace ConsoleApp
       {
         case "1":
           {
-            Wrapper.EncodePhone();
+            System.Console
+          .WriteLine("Please enter the phone number that has to encoded");
+            string inputPhNo = System.Console.ReadLine();
+            Wrapper.EncodePhone(inputPhNo);
+            ProcessUserCommands.ProcessIn();
             break;
           }
         case "2":

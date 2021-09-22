@@ -7,12 +7,10 @@ namespace ConsoleApp
 {
   public static class Wrapper
   {
-    public static void EncodePhone()
+    public static void EncodePhone(string inputPhNo)
     {
       EncodePhone encode = new EncodePhone();
-      Console
-          .WriteLine("Please enter the phone number that has to encoded");
-      string inputPhNo = Console.ReadLine();
+
       List<string> encodedWords = new List<string>();
       string[] dictData = DictionaryData.readDataFromTextFile();
       encodedWords = encode.encodePhNo(inputPhNo, dictData);
@@ -32,7 +30,7 @@ namespace ConsoleApp
           Console.WriteLine(item.ToUpper());
         }
       }
-      ProcessUserCommands.ProcessIn();
+
     }
 
     public static void viewDictionary()

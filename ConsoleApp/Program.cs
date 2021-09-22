@@ -4,6 +4,12 @@
   {
     static void Main(string[] args)
     {
+      if (args.Length != 0 && args[0] != " ")
+      {
+        FileInput.readInput(args[0]);
+        return;
+      }
+
       System
           .Console
           .WriteLine("\n🙏 Hello!!\nNow list your phone numbers 📞 using letters \n ");
