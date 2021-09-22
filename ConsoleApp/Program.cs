@@ -6,7 +6,7 @@
     {
       if (args.Length != 0 && args[0] != " ")
       {
-        FileInput.encodePhNoFromFile(args[0]);
+        FileInput.EncodePhNoFromFile(args[0]);
         return;
       }
 

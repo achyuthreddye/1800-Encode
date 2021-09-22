@@ -9,7 +9,16 @@ namespace HelperTest
     {
       string inputString = "22.5&5";
       string expectedString = "22.55";
-      string actualString = StringHelpers.removeAllPunctuationsApartFromPeriod(inputString);
+      string actualString = StringHelpers.RemoveAllPunctuationsApartFromPeriod(inputString);
+      Assert.AreEqual(expectedString, actualString);
+
+    }
+    [TestMethod]
+    public void TestToRemoveAllPunctuationAprtFromPeriod1()
+    {
+      string inputString = "22.5.5";
+      string expectedString = "22.5.5";
+      string actualString = StringHelpers.RemoveAllPunctuationsApartFromPeriod(inputString);
       Assert.AreEqual(expectedString, actualString);
 
     }

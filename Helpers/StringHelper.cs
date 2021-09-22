@@ -5,7 +5,7 @@ namespace Helpers
   public static class StringHelpers
   {
     public static string
-    removeAllPunctuationsApartFromPeriod(string inputString)
+    RemoveAllPunctuationsApartFromPeriod(string inputString)
     {
       var sb = new StringBuilder();
 

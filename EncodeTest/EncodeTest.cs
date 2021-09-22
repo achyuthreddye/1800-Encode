@@ -16,7 +16,7 @@ namespace EncodeTest
       string[] sampleOutput = { "ball", "call" };
       List<string> ExpectedOutputList = new List<string>(sampleOutput);
       CollectionAssert
-                .AreEqual(encode.encodePhNo("2255", dictData), ExpectedOutputList);
+                .AreEqual(encode.EncodePhNo("2255", dictData), ExpectedOutputList);
     }
 
     [TestMethod]
@@ -25,7 +25,7 @@ namespace EncodeTest
       EncodePhone encode = new EncodePhone();
       string[] sampleOutput = { "ba0ll", "ca0ll" };
       List<string> ExpectedOutputList = new List<string>(sampleOutput);
-      List<string> ActualOutputList = encode.encodePhNo("22055", dictData);
+      List<string> ActualOutputList = encode.EncodePhNo("22055", dictData);
 
       bool isEqual =
           Enumerable
@@ -39,7 +39,7 @@ namespace EncodeTest
     {
       EncodePhone encode = new EncodePhone();
       List<string> ExpectedOutputList = new List<string>();
-      List<string> ActualOutputList = encode.encodePhNo("220055", dictData);
+      List<string> ActualOutputList = encode.EncodePhNo("220055", dictData);
 
       bool isEqual =
           Enumerable
@@ -54,7 +54,7 @@ namespace EncodeTest
       EncodePhone encode = new EncodePhone();
       string[] encoded = { "ba-ll", "ca-ll" };
       List<string> ExpectedOutputList = new List<string>(encoded);
-      List<string> ActualOutputList = encode.encodePhNo("22.55", dictData);
+      List<string> ActualOutputList = encode.EncodePhNo("22.55", dictData);
       bool isEqual =
           Enumerable
               .SequenceEqual(ExpectedOutputList.OrderBy(e => e),

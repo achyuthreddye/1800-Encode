@@ -5,7 +5,7 @@ namespace Dictionary
 {
   public static class DictionaryData
   {
-    public static string[] readDataFromTextFile()
+    public static string[] ReadDataFromTextFile()
     {
 
 
@@ -13,10 +13,10 @@ namespace Dictionary
               .ReadAllLines("dictionary.txt");
       return lines;
     }
-    public static void writeDatatoTextFile(string textTobeAdded)
+    public static void WriteDatatoTextFile(string textTobeAdded)
     {
       using StreamWriter file = File.AppendText("dictionary.txt");
-      string[] lines = readDataFromTextFile();
+      string[] lines = ReadDataFromTextFile();
       List<string> linesInDictionary = new List<string>(lines);
       if (!linesInDictionary.Contains(textTobeAdded))
       {

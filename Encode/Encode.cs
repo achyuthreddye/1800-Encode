@@ -22,9 +22,9 @@ namespace Encode
                 "wxyz"
             };
 
-    public List<string> encodePhNo(string number, string[] dictData)
+    public List<string> EncodePhNo(string number, string[] dictData)
     {
-      number = StringHelpers.removeAllPunctuationsApartFromPeriod(number);
+      number = StringHelpers.RemoveAllPunctuationsApartFromPeriod(number);
 
       List<string> combinedList = new List<string>();
       bool consecutiveRepeatedDigits = false;

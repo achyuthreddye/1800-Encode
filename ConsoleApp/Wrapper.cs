@@ -12,8 +12,8 @@ namespace ConsoleApp
       EncodePhone encode = new EncodePhone();
 
       List<string> encodedWords = new List<string>();
-      string[] dictData = DictionaryData.readDataFromTextFile();
-      encodedWords = encode.encodePhNo(inputPhNo, dictData);
+      string[] dictData = DictionaryData.ReadDataFromTextFile();
+      encodedWords = encode.EncodePhNo(inputPhNo, dictData);
 
       if (encodedWords.Count == 0)
       {
@@ -33,9 +33,9 @@ namespace ConsoleApp
 
     }
 
-    public static void viewDictionary()
+    public static void ViewDictionary()
     {
-      string[] dicData = DictionaryData.readDataFromTextFile();
+      string[] dicData = DictionaryData.ReadDataFromTextFile();
       Console.WriteLine("The words in the dictionary are");
       foreach (string item in dicData)
       {
@@ -44,12 +44,12 @@ namespace ConsoleApp
       ProcessUserCommands.ProcessIn();
     }
 
-    public static void addToDictionary()
+    public static void AddToDictionary()
     {
       Console
           .WriteLine("Please enter the word that has to added to the dictionary");
       string wordTobeAdded = Console.ReadLine();
-      DictionaryData.writeDatatoTextFile(wordTobeAdded);
+      DictionaryData.WriteDatatoTextFile(wordTobeAdded);
       Console
           .WriteLine("Added the word to the dictionary. Successfully!!!!");
       ProcessUserCommands.ProcessIn();

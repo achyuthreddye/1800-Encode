@@ -23,19 +23,19 @@ namespace ConsoleApp
           }
         case "2":
           {
-            Wrapper.viewDictionary();
+            Wrapper.ViewDictionary();
             break;
           }
         case "3":
           {
-            Wrapper.addToDictionary();
+            Wrapper.AddToDictionary();
             break;
           }
         case "4":
           {
             System.Console.WriteLine("Please enter the valid input file📚 along with .txt extension");
             string inputFile = System.Console.ReadLine();
-            FileInput.encodePhNoFromFile(inputFile);
+            FileInput.EncodePhNoFromFile(inputFile);
             break;
           }
         case "5":
