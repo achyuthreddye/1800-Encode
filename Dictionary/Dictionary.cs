@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using System.Threading.Tasks;
 using System.Collections.Generic;
 
 namespace Dictionary
@@ -14,7 +13,7 @@ namespace Dictionary
               .ReadAllLines("dictionary.txt");
       return lines;
     }
-    public static Task writeDatatoTextFile(string textTobeAdded)
+    public static void writeDatatoTextFile(string textTobeAdded)
     {
       using StreamWriter file = File.AppendText("dictionary.txt");
       string[] lines = readDataFromTextFile();
@@ -24,7 +23,7 @@ namespace Dictionary
         file.WriteLine(textTobeAdded);
 
       }
-      return Task.CompletedTask;
+
     }
   }
 }
