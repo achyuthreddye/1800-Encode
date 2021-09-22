@@ -18,6 +18,12 @@ This is a command line application:
 1. dotnet run --project ConsoleApp/ConsoleApp.csproj
 ```
 
+## Running the app to encode all the phone numbers in the text file
+
+```bash
+1. dotnet run --project ConsoleApp/ConsoleApp.csproj [fileName]eg:(input.txt)
+```
+
 ## 🪣 List of Options Available
 
 Users can interact with the Console App with the following options:
