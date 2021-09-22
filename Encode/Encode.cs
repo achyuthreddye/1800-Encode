@@ -78,10 +78,6 @@ namespace Encode
       {
         List<string> combinedListIndex =
             Helper.CombineListAtGivenIndex(combinedList, toBeReplaced);
-        foreach (string item in combinedListIndex)
-        {
-          System.Console.WriteLine(item);
-        }
 
         return combinedListIndex;
       }

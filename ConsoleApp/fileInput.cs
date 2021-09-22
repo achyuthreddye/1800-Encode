@@ -5,7 +5,7 @@ namespace ConsoleApp
 {
   public static class FileInput
   {
-    public static void readInput(string fileName)
+    public static void encodePhNoFromFile(string fileName)
     {
 
       if (File.Exists(fileName))

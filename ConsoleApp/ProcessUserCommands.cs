@@ -7,7 +7,7 @@ namespace ConsoleApp
       string input;
       System
          .Console
-         .WriteLine("\nEnter the following option that is needed \n 1--> Encode your Phone number 📞 based on the current dictionary 📚  of words \n 2--> View 👀 all the words in the dictionary📚  \n 3--> Not satisified 😞 with the current words in the dictionary📚 .🪛Customize🔩 your dictionary 📚 by adding a word 😎 of your choice  \n 4--> 🛑 quit ");
+         .WriteLine("\nEnter the following option that is needed \n 1--> Encode your Phone number 📞 based on the current dictionary 📚  of words \n 2--> View 👀 all the words in the dictionary📚  \n 3--> Not satisified 😞 with the current words in the dictionary📚 .🪛Customize🔩 your dictionary 📚 by adding a word 😎 of your choice  \n 4--> Encode all the Phone Numbers📞 in your text file 📚 \n 5--> 🛑 quit ");
 
       input = System.Console.ReadLine();
       switch (input.ToLower())
@@ -32,6 +32,13 @@ namespace ConsoleApp
             break;
           }
         case "4":
+          {
+            System.Console.WriteLine("Please enter the valid input file📚 along with .txt extension");
+            string inputFile = System.Console.ReadLine();
+            FileInput.encodePhNoFromFile(inputFile);
+            break;
+          }
+        case "5":
           {
             System.Console.WriteLine("👋 Bye!!!, We will meet soon !!");
             return;
