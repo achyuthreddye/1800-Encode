@@ -27,7 +27,6 @@ namespace Encode
       number = Helper.removeAllPunctuationsApartFromPeriod(number);
 
       List<string> combinedList = new List<string>();
-      // string[] dictData = DictionaryData.readDataFromTextFile();
       bool consecutiveRepeatedDigits = false;
 
       Hashtable toBeReplaced = new Hashtable();
