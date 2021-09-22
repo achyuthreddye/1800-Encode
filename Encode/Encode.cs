@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Dictionary;
 using Helpers;
 
 namespace Encode
@@ -23,12 +22,12 @@ namespace Encode
                 "wxyz"
             };
 
-    public List<string> encodePhNo(string number)
+    public List<string> encodePhNo(string number, string[] dictData)
     {
       number = Helper.removeAllPunctuationsApartFromPeriod(number);
 
       List<string> combinedList = new List<string>();
-      string[] dictData = DictionaryData.readDataFromTextFile();
+      // string[] dictData = DictionaryData.readDataFromTextFile();
       bool consecutiveRepeatedDigits = false;
 
       Hashtable toBeReplaced = new Hashtable();

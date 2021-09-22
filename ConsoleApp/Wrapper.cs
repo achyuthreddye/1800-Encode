@@ -14,7 +14,8 @@ namespace ConsoleApp
           .WriteLine("Please enter the phone number that has to encoded");
       string inputPhNo = Console.ReadLine();
       List<string> encodedWords = new List<string>();
-      encodedWords = encode.encodePhNo(inputPhNo);
+      string[] dictData = DictionaryData.readDataFromTextFile();
+      encodedWords = encode.encodePhNo(inputPhNo, dictData);
 
       if (encodedWords.Count == 0)
       {
