@@ -24,7 +24,7 @@ namespace Encode
 
     public List<string> encodePhNo(string number, string[] dictData)
     {
-      number = Helper.removeAllPunctuationsApartFromPeriod(number);
+      number = StringHelpers.removeAllPunctuationsApartFromPeriod(number);
 
       List<string> combinedList = new List<string>();
       bool consecutiveRepeatedDigits = false;
