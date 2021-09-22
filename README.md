@@ -33,8 +33,9 @@ Users can interact with the Console App with the following options:
 - **2**: `To view all the words in the dictionary` will display all the words in the dictionary.
 
 - **3**: `Adding a word to the dictionary` will add a word to the dictionary.
+- **4**: `Reading Input from the Input text file` will encode all the words in the input.txt file.
 
-- **4**: `quit` will exit from the app.
+- **5**: `quit` will exit from the app.
 
 ## Unit testing the individual components of the app.
 
