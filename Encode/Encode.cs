@@ -53,12 +53,10 @@ namespace Encode
       combinedList = Helper.ItemsInPresentDictionary(combinedList, dictData);
       if (toBeReplaced.Count >= 1)
       {
-        List<string> combinedListIndex = Helper.CombineListAtGivenIndex(combinedList, toBeReplaced);
-
-        return combinedListIndex;
+        combinedList = Helper.CombineListAtGivenIndex(combinedList, toBeReplaced);
       }
-      else
-        return combinedList;
+
+      return combinedList;
     }
   }
 }
