@@ -17,7 +17,9 @@ namespace HelperTest
       List<string> expectedOutput = new List<string>(sampleOutput);
       Hashtable numberNames = new Hashtable();
       numberNames.Add(2, 0);
+
       List<string> actualOutput = Helper.CombineListAtGivenIndex(list1, numberNames);
+
       CollectionAssert.AreEqual(actualOutput, expectedOutput);
     }
 
@@ -30,9 +32,9 @@ namespace HelperTest
       string[] sampleOutput = { "ba", "ca" };
       string tobeCombined = "abc";
       char[] charArr = tobeCombined.ToCharArray();
-
       List<string> list1 = new List<string>(sampleData);
       List<string> ExpectedOutputList = new List<string>(sampleOutput);
+
       List<string> actualOutputList = Helper.CombineListBasedOnDictionary(list1, charArr, dictionary);
 
       CollectionAssert.AreEqual(actualOutputList, ExpectedOutputList);
@@ -42,13 +44,12 @@ namespace HelperTest
     {
       string[] dictionary =
       { "callme", "call", "ball", "apache", "hyundai", "zebra" };
-
       string[] sampleOutput = { "a", "b", "c", "c" };
       string tobeCombined = "abc";
       char[] charArr = tobeCombined.ToCharArray();
-
       List<string> list1 = new List<string>();
       List<string> ExpectedOutputList = new List<string>(sampleOutput);
+
       List<string> actualOutputList = Helper.CombineListBasedOnDictionary(list1, charArr, dictionary);
 
       CollectionAssert.AreEqual(actualOutputList, ExpectedOutputList);
@@ -61,10 +62,11 @@ namespace HelperTest
       { "callme", "call", "ball", "apache", "hyundai", "zebra" };
       string[] inputData = { "ca", "ba", "ball", "call" };
       string[] expectedData = { "ball", "call" };
-
       List<string> list1 = new List<string>(inputData);
       List<string> ExpectedList = new List<string>(expectedData);
+
       List<string> actualOutputList = Helper.ItemsInPresentDictionary(list1, dictionary);
+
       CollectionAssert.AreEqual(actualOutputList, ExpectedList);
     }
   }

@@ -25,32 +25,23 @@ namespace Encode
     public List<string> EncodePhNo(string number, string[] dictData)
     {
       number = StringHelpers.RemoveAllPunctuationsApartFromPeriod(number);
-
       List<string> combinedList = new List<string>();
-      bool consecutiveRepeatedDigits = false;
-
+      bool consecutiveRepeatedDigits = StringHelpers.IsConsecutiveNonPhoneEncoded(number, phoneCoded);
       Hashtable toBeReplaced = new Hashtable();
+
+      if (consecutiveRepeatedDigits) { return new List<string>(); }
 
       for (int i = 0; i < number.Length; i++)
       {
-        if (consecutiveRepeatedDigits) break; //redundant
-
         if (number[i].ToString() == ".")
         {
           toBeReplaced.Add(i, "-");
           continue;
         }
         int index = int.Parse(number[i].ToString());
-        int nextIndex = (i == number.Length - 1 || number[i + 1].ToString() == ".") ? -1 : int.Parse(number[i + 1].ToString());
 
         if (phoneCoded[index] == " ")
         {
-          if (nextIndex != -1 && phoneCoded[nextIndex] == " ")
-          {
-            consecutiveRepeatedDigits = true;
-            break;
-          }
-
           toBeReplaced.Add(i, number[i]);
         }
         else
@@ -59,9 +50,6 @@ namespace Encode
           combinedList = Helper.CombineListBasedOnDictionary(combinedList, charrArr, dictData);
         }
       }
-
-      if (consecutiveRepeatedDigits) { return new List<string>(); }
-
       combinedList = Helper.ItemsInPresentDictionary(combinedList, dictData);
       if (toBeReplaced.Count >= 1)
       {
