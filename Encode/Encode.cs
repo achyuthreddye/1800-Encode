@@ -40,13 +40,11 @@ namespace Encode
           toBeReplaced.Add(i, "-");
           continue;
         }
-
         int index = int.Parse(number[i].ToString());
-
         int nextIndex =
-            (i == number.Length - 1 || number[i + 1].ToString() == ".")
-                ? -1
-                : int.Parse(number[i + 1].ToString());
+                    (i == number.Length - 1 || number[i + 1].ToString() == ".")
+                        ? -1
+                        : int.Parse(number[i + 1].ToString());
 
         if (phoneCoded[index] == " ")
         {
