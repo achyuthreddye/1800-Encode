@@ -6,16 +6,16 @@ namespace Helpers
   public static class Helper
   {
     public static List<string>
-    ItemsInPresentDictionary(
-        List<string> inputList,
-        string[] dictionaryArray
-    )
+    ItemsInPresentDictionary(List<string> inputList, string[] dictionaryArray)
     {
       List<string> dictionaryList = new List<string>(dictionaryArray);
       List<string> cleanedList = new List<string>();
       foreach (string item in inputList)
       {
-        if (dictionaryList.Contains(item)) cleanedList.Add(item);
+        if (dictionaryList.Contains(item))
+        {
+          cleanedList.Add(item);
+        }
       }
       return cleanedList;
     }
@@ -30,10 +30,7 @@ namespace Helpers
         string intermediateString = item;
         foreach (DictionaryEntry item1 in charItem)
         {
-          intermediateString =
-              intermediateString
-                  .Insert(int.Parse(item1.Key.ToString()),
-                  item1.Value.ToString());
+          intermediateString = intermediateString.Insert(int.Parse(item1.Key.ToString()), item1.Value.ToString());
         }
         combinedList.Add(intermediateString);
       }
@@ -41,11 +38,7 @@ namespace Helpers
     }
 
     public static List<string>
-    CombineListBasedOnDictionary(
-        List<string> List1,
-        char[] charList,
-        string[] dictionaryList
-    )
+    CombineListBasedOnDictionary(List<string> List1, char[] charList, string[] dictionaryList)
     {
       List<string> combinedList = new List<string>();
 
@@ -55,9 +48,7 @@ namespace Helpers
         {
           foreach (string phrase in dictionaryList)
           {
-            if (
-                phrase.ToString().StartsWith(item) &&
-                !combinedList.Contains(phrase)
+            if (phrase.ToString().StartsWith(item) && !combinedList.Contains(phrase)
             )
             {
               combinedList.Add(item.ToString());
@@ -71,10 +62,7 @@ namespace Helpers
         {
           foreach (string phrase in dictionaryList)
           {
-            if (
-                phrase.StartsWith(item + charItem) &&
-                !combinedList.Contains(item + charItem)
-            )
+            if (phrase.StartsWith(item + charItem) && !combinedList.Contains(item + charItem))
             {
               combinedList.Add(item + charItem);
             }

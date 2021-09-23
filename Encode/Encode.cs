@@ -41,10 +41,7 @@ namespace Encode
           continue;
         }
         int index = int.Parse(number[i].ToString());
-        int nextIndex =
-                    (i == number.Length - 1 || number[i + 1].ToString() == ".")
-                        ? -1
-                        : int.Parse(number[i + 1].ToString());
+        int nextIndex = (i == number.Length - 1 || number[i + 1].ToString() == ".") ? -1 : int.Parse(number[i + 1].ToString());
 
         if (phoneCoded[index] == " ")
         {
@@ -58,24 +55,17 @@ namespace Encode
         }
         else
         {
-          char[] charrArr =
-              phoneCoded[int.Parse(number[i].ToString())]
-                  .ToCharArray();
-          combinedList =
-              Helper
-                  .CombineListBasedOnDictionary(combinedList,
-                  charrArr,
-                  dictData);
+          char[] charrArr = phoneCoded[int.Parse(number[i].ToString())].ToCharArray();
+          combinedList = Helper.CombineListBasedOnDictionary(combinedList, charrArr, dictData);
         }
       }
 
-      if (consecutiveRepeatedDigits) return new List<string>();
-      combinedList =
-          Helper.ItemsInPresentDictionary(combinedList, dictData);
+      if (consecutiveRepeatedDigits) { return new List<string>(); }
+
+      combinedList = Helper.ItemsInPresentDictionary(combinedList, dictData);
       if (toBeReplaced.Count >= 1)
       {
-        List<string> combinedListIndex =
-            Helper.CombineListAtGivenIndex(combinedList, toBeReplaced);
+        List<string> combinedListIndex = Helper.CombineListAtGivenIndex(combinedList, toBeReplaced);
 
         return combinedListIndex;
       }

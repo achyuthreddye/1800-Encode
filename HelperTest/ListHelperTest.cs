@@ -17,8 +17,7 @@ namespace HelperTest
       List<string> expectedOutput = new List<string>(sampleOutput);
       Hashtable numberNames = new Hashtable();
       numberNames.Add(2, 0);
-      List<string> actualOutput =
-          Helper.CombineListAtGivenIndex(list1, numberNames);
+      List<string> actualOutput = Helper.CombineListAtGivenIndex(list1, numberNames);
       CollectionAssert.AreEqual(actualOutput, expectedOutput);
     }
 
@@ -34,8 +33,7 @@ namespace HelperTest
 
       List<string> list1 = new List<string>(sampleData);
       List<string> ExpectedOutputList = new List<string>(sampleOutput);
-      List<string> actualOutputList =
-          Helper.CombineListBasedOnDictionary(list1, charArr, dictionary);
+      List<string> actualOutputList = Helper.CombineListBasedOnDictionary(list1, charArr, dictionary);
 
       CollectionAssert.AreEqual(actualOutputList, ExpectedOutputList);
     }
@@ -51,8 +49,7 @@ namespace HelperTest
 
       List<string> list1 = new List<string>();
       List<string> ExpectedOutputList = new List<string>(sampleOutput);
-      List<string> actualOutputList =
-          Helper.CombineListBasedOnDictionary(list1, charArr, dictionary);
+      List<string> actualOutputList = Helper.CombineListBasedOnDictionary(list1, charArr, dictionary);
 
       CollectionAssert.AreEqual(actualOutputList, ExpectedOutputList);
     }
@@ -67,8 +64,7 @@ namespace HelperTest
 
       List<string> list1 = new List<string>(inputData);
       List<string> ExpectedList = new List<string>(expectedData);
-      List<string> actualOutputList =
-          Helper.ItemsInPresentDictionary(list1, dictionary);
+      List<string> actualOutputList = Helper.ItemsInPresentDictionary(list1, dictionary);
       CollectionAssert.AreEqual(actualOutputList, ExpectedList);
     }
   }

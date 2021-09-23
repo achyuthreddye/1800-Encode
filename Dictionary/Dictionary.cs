@@ -9,8 +9,7 @@ namespace Dictionary
     {
       var path = System.IO.Directory.GetCurrentDirectory();
       path = Path.Combine(path, "dictionary.txt");
-      string[] lines = File
-              .ReadAllLines(path);
+      string[] lines = File.ReadAllLines(path);
       return lines;
     }
     public static void WriteDatatoTextFile(string textTobeAdded)
@@ -23,9 +22,7 @@ namespace Dictionary
       if (!linesInDictionary.Contains(textTobeAdded))
       {
         file.WriteLine(textTobeAdded);
-
       }
-
     }
   }
 }

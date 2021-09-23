@@ -17,10 +17,7 @@ namespace ConsoleApp
 
       if (encodedWords.Count == 0)
       {
-        Console
-            .WriteLine("there are no possible encoding for " +
-            inputPhNo +
-            "  in the dictionary. ");
+        Console.WriteLine("there are no possible encoding for " + inputPhNo + "  in the dictionary. ");
       }
       else
       {
@@ -44,12 +41,10 @@ namespace ConsoleApp
 
     public static void AddToDictionary()
     {
-      Console
-          .WriteLine("Please enter the word that has to added to the dictionary");
+      Console.WriteLine("Please enter the word that has to added to the dictionary");
       string wordTobeAdded = Console.ReadLine();
       DictionaryData.WriteDatatoTextFile(wordTobeAdded);
-      Console
-          .WriteLine("Added the word to the dictionary. Successfully!!!!");
+      Console.WriteLine("Added the word to the dictionary. Successfully!!!!");
     }
   }
 }
