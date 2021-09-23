@@ -9,6 +9,8 @@
         FileInput.EncodePhNoFromFile(args[0]);
         return;
       }
+      
+
 
       System
           .Console
