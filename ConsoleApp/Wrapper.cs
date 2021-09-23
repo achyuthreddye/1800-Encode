@@ -30,7 +30,6 @@ namespace ConsoleApp
           Console.WriteLine(item.ToUpper());
         }
       }
-
     }
 
     public static void ViewDictionary()
@@ -41,7 +40,6 @@ namespace ConsoleApp
       {
         Console.WriteLine(item.ToUpper());
       }
-      ProcessUserCommands.ProcessIn();
     }
 
     public static void AddToDictionary()
@@ -52,7 +50,6 @@ namespace ConsoleApp
       DictionaryData.WriteDatatoTextFile(wordTobeAdded);
       Console
           .WriteLine("Added the word to the dictionary. Successfully!!!!");
-      ProcessUserCommands.ProcessIn();
     }
   }
 }

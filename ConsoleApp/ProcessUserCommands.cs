@@ -18,7 +18,6 @@ namespace ConsoleApp
           .WriteLine("Please enter the phone number that has to encoded");
             string inputPhNo = System.Console.ReadLine();
             Wrapper.EncodePhone(inputPhNo);
-            ProcessUserCommands.ProcessIn();
             break;
           }
         case "2":
@@ -52,6 +51,7 @@ namespace ConsoleApp
             break;
           }
       }
+      ProcessUserCommands.ProcessIn();
     }
   }
 }
