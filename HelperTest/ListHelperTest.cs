@@ -39,6 +39,23 @@ namespace HelperTest
 
       CollectionAssert.AreEqual(actualOutputList, ExpectedOutputList);
     }
+    [TestMethod]
+    public void TestToCombineTwoListsBasedOnDictionaryWihEmptyList()
+    {
+      string[] dictionary =
+      { "callme", "call", "ball", "apache", "hyundai", "zebra" };
+
+      string[] sampleOutput = { "a", "b", "c", "c" };
+      string tobeCombined = "abc";
+      char[] charArr = tobeCombined.ToCharArray();
+
+      List<string> list1 = new List<string>();
+      List<string> ExpectedOutputList = new List<string>(sampleOutput);
+      List<string> actualOutputList =
+          Helper.CombineListBasedOnDictionary(list1, charArr, dictionary);
+
+      CollectionAssert.AreEqual(actualOutputList, ExpectedOutputList);
+    }
 
     [TestMethod]
     public void TestItemsInPresentDictionary()

@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-
 namespace Helpers
 {
   public static class Helper
   {
     public static List<string>
-    ItemsInPresentDictionary(List<string> inputList, string[] dictionaryArray)
+    ItemsInPresentDictionary(
+        List<string> inputList,
+        string[] dictionaryArray
+    )
     {
       List<string> dictionaryList = new List<string>(dictionaryArray);
       List<string> cleanedList = new List<string>();
@@ -17,8 +19,6 @@ namespace Helpers
       }
       return cleanedList;
     }
-
-
 
     public static List<string>
     CombineListAtGivenIndex(List<string> list1, Hashtable charItem)
